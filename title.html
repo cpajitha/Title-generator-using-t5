@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Generator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GetTitle: Title Generation Website</h1>
+        <textarea id="abstractInput" rows="10" cols="50" placeholder="Enter abstract here"></textarea><br>
+        <button onclick="generateTitle()">Generate Title</button>
+        <div id="generatedTitle"></div>
+    </div>
+    <script>
+        async function generateTitle() {
+            const abstract = document.getElementById("abstractInput").value;
+            if (!abstract.trim()) {
+                alert("Please enter an abstract.");
+                return;
+            }
+            const response = await fetch('http://localhost:8000/generate-title', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ abstract: abstract })
+            });
+            if (response.ok) {
+                const data = await response.json();
+                // Redirect to four.html with generated title as a URL parameter
+                window.location.href = `four.html?title=${encodeURIComponent(data.title)}`;
+            } else {
+                document.getElementById("generatedTitle").innerText = "Error generating title.";
+            }
+        }
+    </script>
+</body>
+</html>

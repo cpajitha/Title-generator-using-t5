@@ -1,0 +1,98 @@
+/* Reset default styles and set base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C2DE86; /* Set background color */
+}
+
+/* Styles for the main container */
+.container {
+    max-width:2438px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #8BBA65; /* Set background color */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Styles for the main heading */
+h1 {
+    text-align: center;
+    color: #333; /* Set text color */
+    margin-bottom: 20px;
+}
+
+/* Styles for the signs container */
+.signs-container {
+    display: flex;
+    flex-wrap: unwrap; /* Allow items to wrap into multiple rows */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 20px; /* Add margin between the text and images */
+}
+
+/* Styles for the word boxes */
+.word-box {
+    width: calc(50% - 20px); /* Calculate width for two boxes per row with margin */
+    margin: 10px; /* Adjust margin as needed */
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Styles for the signs within each box */
+.signs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the sign images */
+.signs img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 5px; /* Add margin around each image */
+}
+
+/* Styles for the subtext below the signs */
+.subtext {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* Styles for the navigation buttons */
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-btn,
+.home-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover styles for the navigation buttons */
+.back-btn:hover,
+.home-btn:hover {
+    background-color: #555; /* Darken background color on hover */
+}
+
+/* Styles for links within the page */
+a {
+    color: inherit; /* Inherit text color from parent */
+    text-decoration: none; /* Remove underline */
+}
+#generated-title{
+width:98%;}

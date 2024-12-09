@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Page</title>
+    <link rel="stylesheet" href="four.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generated Title</h1>
+        <div class="text-container">
+            <textarea id="generated-title" readonly></textarea>
+        </div>
+        <div class="navigation">
+            <a href="title.html" class="back-btn"><button>Back</button></a>
+            <a href="home.html" class="home-btn"><button>Home</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Fetch generated title from URL parameter and display it in the textarea
+        const urlParams = new URLSearchParams(window.location.search);
+        const generatedTitle = urlParams.get('title');
+        document.getElementById("generated-title").value = generatedTitle;
+        
+    </script>
+</body>
+</html>
